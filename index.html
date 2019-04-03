@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js"></script>
+    <script>
+        F.module(['lib/event', 'lib/dom'], function (events, dom) {
+            events.on('demo', 'click', function () {
+                if(dom.html('demo') === 'success') {
+                    dom.html('demo', 'test');
+                }else{
+                    dom.html('demo', 'success');
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+<button id="demo">test</button>
+</body>
+</html>
